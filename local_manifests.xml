@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    	<remote name="main"
+            	fetch="https://github.com/anoosragh69" />
+
+    	<remote name="pos-hanoip"
+            	fetch="https://github.com/PixelOS-hanoip" />
+
+    	<!-- Device trees -->
+    	<project path="device/motorola/hanoip" name="android_device_motorola_hanoip" remote="main" revision="fourteen" />
+    	<project path="vendor/motorola/hanoip" name="android_vendor_motorola_hanoip" remote="main" revision="fourteen" />
+
+    	<!-- Kernel -->
+    	<project path="device/motorola/hanoip-kernel" name="android_device_motorola_hanoip-kernel" remote="main" revision="master" />
+
+	<!-- CameraGo -->
+	<project path="packages/apps/CameraGo" name="android_packages_apps_CameraGo" remote="main" revision="main" />
+
+	<!-- Remove projects -->
+	<remove-project name="packages_apps_Settings" />
+	<remove-project name="vendor_aosp" />
+	<remove-project name="packages_apps_Updates" />
+
+	<!-- Forked repos -->
+	<project path="packages/apps/Settings" name="packages_apps_Settings" remote="pos-hanoip" revision="fourteen" />
+	<project path="packages/apps/Updates" name="packages_apps_Updates" remote="pos-hanoip" revision="fourteen" />
+	<project path="vendor/aosp" name="vendor_aosp" remote="pos-hanoip" revision="fourteen" />
+
+</manifest>
